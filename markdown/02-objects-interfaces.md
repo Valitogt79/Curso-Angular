@@ -1,5 +1,28 @@
 ## Explicación Paso a Paso del Código en TypeScript
 
+```typescript
+let skills: string[] = ["Bash", "Counter", "Healing"];
+
+interface Character {
+  name: string;
+  hp: number;
+  skills: string[];
+  hometown?: string;
+}
+
+const strider: Character = {
+  name: "Strider",
+  hp: 100,
+  skills: ["bash", "counter"],
+  hometown: "",
+};
+
+strider.hometown = "Rivendell";
+
+console.table(strider);
+export {};
+```
+
 Este código en TypeScript muestra el uso de arreglos tipados, interfaces y objetos, ilustrando buenas prácticas en la declaración de variables y estructuras de datos.
 
 ### 1. Declaración de un Arreglo Tipado
