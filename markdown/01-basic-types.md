@@ -1,5 +1,17 @@
 ## Explicación del Código en TypeScript
 
+```typescript
+const name: string = "Valitogt";
+let hpPoints: number | "FUEL" = 95;
+const isAlive: boolean = true;
+
+hpPoints = "FUEL";
+
+console.log({ name, hpPoints, isAlive });
+
+export {};
+```
+
 Este fragmento de código está escrito en TypeScript y muestra el uso de tipos de datos en variables, así como la asignación de valores con union types.
 
 ### Declaración de Variables
