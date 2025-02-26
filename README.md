@@ -22,6 +22,6 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 
 ## Mis Apuntes
 
-- [Hoja de Atajos de Angular](./markdown/00-angular-shortcuts.md)
+- [Hoja de Atajos de Angular](./markdown/angular-cheat-sheet.pdf)
 - [01 Basic Types](./markdown/01-basic-types.md)
 - [Objetos, arreglos e interfaces](./markdown/02-object-interfaces.md)
