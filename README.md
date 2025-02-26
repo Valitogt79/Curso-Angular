@@ -9,7 +9,7 @@ El objetivo de este repositorio es llevar un registro personal de mi aprendizaje
 ## Tabla de Contenidos
 
 - [Requisitos Previos](#requisitos-previos)
--
+- [Mis apuntes](#mis-apuntes)
 
 ## Requisitos Previos
 
@@ -19,3 +19,7 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [Angular CLI](https://angular.io/cli) (`npm install -g @angular/cli`)
 - Un editor de código como [Visual Studio Code](https://code.visualstudio.com/) pero en mi caso [Nvim con lazyvim](https://www.lazyvim.org/installation)
 - Conocimientos básicos de HTML, CSS y JavaScript
+
+## Mis Apuntes
+
+- [01 Basic Types](./markdown/01-basic-types.md)
