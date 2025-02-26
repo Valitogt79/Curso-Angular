@@ -1,4 +1,6 @@
 import './style.css'
+// import './topics/01-basic-types'   //-> requiriendo el modulo
+
 document.querySelector<HTMLDivElement>('#app')!
 
 
