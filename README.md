@@ -24,4 +24,4 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 
 - [Hoja de Atajos de Angular](./markdown/angular-cheat-sheet.pdf)
 - [01 Basic Types](./markdown/01-basic-types.md)
-- [Objetos, arreglos e interfaces](./markdown/02-object-interfaces.md)
+- [02 Objetos, arreglos e interfaces](/markdown/02-objects-interfaces.md)
