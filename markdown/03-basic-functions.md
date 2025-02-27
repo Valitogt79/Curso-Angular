@@ -1,6 +1,6 @@
 ## Explicación Paso a Paso del Código en TypeScript
 
-```typescript
+````typescript
 function addNumbers(a: number, b: number) {
   return a + b;
 }
@@ -17,14 +17,33 @@ function multiply(
   return firstNumber * base;
 }
 
-const result: number = addNumbers(1, 2);
-const result2: string = addNumbersArrow(1, 2);
-const multiplyResult: number = multiply(5);
+// const result: number = addNumbers(1, 2);
+// const result2: string = addNumbersArrow(1, 2);
+// const multiplyResult: number = multiply(5);
+//
+// console.log({ result, result2, multiplyResult });
 
-console.log({ result, result2, multiplyResult });
+interface Character {
+  name: string;
+  hp: number;
+  showHp: () => void;
+}
+const healCharacter = (character: Character, amount: number) => {
+  character.hp += amount;
+};
 
-export {};
-```
+const strider: Character = {
+  name: "Strider",
+  hp: 50,
+  showHp() {
+    console.log(`Puntos de Vida ${this.hp}`);
+  },
+};
+
+healCharacter(strider, 10);
+strider.showHp();
+
+export {};```
 
 Este código en TypeScript define funciones para realizar operaciones matemáticas, mostrando diferentes formas de declarar funciones y el uso de valores por defecto y opcionales.
 
@@ -34,7 +53,7 @@ Este código en TypeScript define funciones para realizar operaciones matemátic
 function addNumbers(a: number, b: number) {
   return a + b;
 }
-```
+````
 
 - `addNumbers` es una función que:
   - Recibe dos argumentos de tipo `number` (`a` y `b`).
@@ -101,16 +120,7 @@ console.log({ result, result2, multiplyResult });
 }
 ```
 
-### 6. Exportación Vacía
-
-```typescript
-export {};
-```
-
-- Define el archivo como un módulo independiente.
-- Previene conflictos de nombres en proyectos grandes.
-
-### 7. Definición de una Interfaz para un Personaje
+### 6. Definición de una Interfaz para un Personaje
 
 ```typescript
 interface Character {
@@ -125,7 +135,7 @@ interface Character {
   - `hp`: un número que indica los puntos de vida.
   - `showHp`: una función que no recibe parámetros y no retorna un valor explícito (`void`).
 
-### 8. Función para Curar un Personaje
+### 7. Función para Curar un Personaje
 
 ```typescript
 const healCharacter = (character: Character, amount: number) => {
@@ -137,7 +147,7 @@ const healCharacter = (character: Character, amount: number) => {
   - Recibe un objeto de tipo `Character` y un `amount` (cantidad a curar).
   - Incrementa los puntos de vida (`hp`) del personaje en la cantidad indicada.
 
-### 9. Creación de un Personaje y Uso de la Función
+### 8. Creación de un Personaje y Uso de la Función
 
 ```typescript
 const strider: Character = {
@@ -154,7 +164,7 @@ const strider: Character = {
   - `hp` inicial de 50.
   - `showHp` como un método que imprime los puntos de vida actuales.
 
-### 10. Curación del Personaje y Mostrado de Vida
+### 9. Curación del Personaje y Mostrado de Vida
 
 ```typescript
 healCharacter(strider, 10);
@@ -168,6 +178,15 @@ strider.showHp();
 Puntos de Vida 60
 ```
 
+### 10. Exportación Vacía
+
+```typescript
+export {};
+```
+
+- Define el archivo como un módulo independiente.
+- Previene conflictos de nombres en proyectos grandes.
+
 ### Conclusión
 
 Este código demuestra:
@@ -176,3 +195,4 @@ Este código demuestra:
 - Creación y modificación de propiedades de un objeto.
 - Uso de funciones con objetos como parámetros.
 - Métodos dentro de objetos para manipular sus propios datos.
+- Definición y uso de funciones con parámetros opcionales y valores predeterminados.
