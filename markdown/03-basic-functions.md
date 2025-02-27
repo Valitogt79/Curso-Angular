@@ -110,11 +110,69 @@ export {};
 - Define el archivo como un módulo independiente.
 - Previene conflictos de nombres en proyectos grandes.
 
+### 7. Definición de una Interfaz para un Personaje
+
+```typescript
+interface Character {
+  name: string;
+  hp: number;
+  showHp: () => void;
+}
+```
+
+- `Character` es una interfaz que define:
+  - `name`: una cadena que representa el nombre del personaje.
+  - `hp`: un número que indica los puntos de vida.
+  - `showHp`: una función que no recibe parámetros y no retorna un valor explícito (`void`).
+
+### 8. Función para Curar un Personaje
+
+```typescript
+const healCharacter = (character: Character, amount: number) => {
+  character.hp += amount;
+};
+```
+
+- `healCharacter` es una función que:
+  - Recibe un objeto de tipo `Character` y un `amount` (cantidad a curar).
+  - Incrementa los puntos de vida (`hp`) del personaje en la cantidad indicada.
+
+### 9. Creación de un Personaje y Uso de la Función
+
+```typescript
+const strider: Character = {
+  name: "Strider",
+  hp: 50,
+  showHp() {
+    console.log(`Puntos de Vida ${this.hp}`);
+  },
+};
+```
+
+- Se crea `strider` con:
+  - `name` como "Strider".
+  - `hp` inicial de 50.
+  - `showHp` como un método que imprime los puntos de vida actuales.
+
+### 10. Curación del Personaje y Mostrado de Vida
+
+```typescript
+healCharacter(strider, 10);
+strider.showHp();
+```
+
+- Se llama a `healCharacter(strider, 10)`, aumentando su `hp` en 10 (total de 60).
+- Se ejecuta `strider.showHp()`, imprimiendo:
+
+```
+Puntos de Vida 60
+```
+
 ### Conclusión
 
 Este código demuestra:
 
-- Uso de funciones tradicionales y funciones flecha.
-- Tipado explícito y retorno de diferentes tipos (`number`, `string`).
-- Parámetros opcionales y valores por defecto.
-- Manejo adecuado de la impresión en consola para depuración.
+- Uso de interfaces para estructurar objetos en TypeScript.
+- Creación y modificación de propiedades de un objeto.
+- Uso de funciones con objetos como parámetros.
+- Métodos dentro de objetos para manipular sus propios datos.
