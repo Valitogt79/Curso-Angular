@@ -29,3 +29,4 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [02 Objetos, arreglos e interfaces](/markdown/02-objects-interfaces.md)
 - [03 Funciones Básicas](./markdown/03-basic-functions.md)
 - [04 Ejercicio de interfaces](./markdown/04-homework-types.md)
+- [05 Desestructuración de Objetos y Arreglos](./markdown/05-desestructuring-Objects-Arrays.md)
