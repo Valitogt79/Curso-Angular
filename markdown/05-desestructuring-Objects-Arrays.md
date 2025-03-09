@@ -1,139 +1,142 @@
 ## Explicación Paso a Paso del Código en TypeScript
 
 ```typescript
-//Desestructuración de objetos
-
-interface AudioPlayer {
-  audioVolume: number;
-  songDuration: number;
-  song: string;
-  details: Details;
+// Desestructuración de funciones
+interface Product {
+  description: string;
+  price: number;
 }
 
-interface Details {
-  author: string;
-  year: number;
-}
-
-const audioPlayer: AudioPlayer = {
-  audioVolume: 90,
-  songDuration: 36,
-  song: "Mess",
-  details: {
-    author: "Ed Sheeran",
-    year: 2015,
-  },
+const phone: Product = {
+  description: "Samsung Galaxy S10",
+  price: 1000.0,
 };
 
-const { song: anotherSong, songDuration: duration, details } = audioPlayer;
+const tablet: Product = {
+  description: "iPad Air",
+  price: 500.0,
+};
 
-const { author } = details;
+interface taxCalculationOptions {
+  tax: number;
+  products: Product[];
+}
 
-console.log("Song: ", anotherSong);
-console.log("Duration: ", duration);
-console.log("Author: ", author);
+// function taxCalculation(options: taxCalculationOptions): [number, number] {
+// function taxCalculation({ tax, products }: taxCalculationOptions): [number, number] {
 
-// Desestructuración de arreglos
-const [, , trunks = "Not Found"]: string[] = ["Goku", "Vegeta"];
-console.error("Personaje 3: ", trunks);
+function taxCalculation(options: taxCalculationOptions): [number, number] {
+  const { tax, products } = options;
+  let total = 0;
+  products.forEach(({ price }) => {
+    total += price;
+  });
+  return [total, total * tax];
+}
+const shoppingCart = [phone, tablet];
+
+const tax = 0.16;
+
+const [total, taxTotal] = taxCalculation({
+  tax: tax,
+  products: shoppingCart,
+});
+
+console.log("Total", total);
+console.log("tax", taxTotal);
 
 export {};
 ```
 
-Este código demuestra el uso de la desestructuración de objetos y arreglos en TypeScript.
+## Desestructuración de Funciones en TypeScript
 
-### 1. Definición de Interfaces
+### 1. Definición de la Interfaz `Product`
 
 ```typescript
-interface AudioPlayer {
-  audioVolume: number;
-  songDuration: number;
-  song: string;
-  details: Details;
-}
-
-interface Details {
-  author: string;
-  year: number;
+interface Product {
+  description: string;
+  price: number;
 }
 ```
 
-- `AudioPlayer` define la estructura de un objeto que representa un reproductor de audio.
-- `Details` es una interfaz anidada dentro de `AudioPlayer`, conteniendo información sobre el autor y el año.
+- Define la estructura de un producto con:
+  - `description`: una cadena con la descripción del producto.
+  - `price`: un número que representa su precio.
 
-### 2. Creación del Objeto `audioPlayer`
+### 2. Creación de Objetos `phone` y `tablet`
 
 ```typescript
-const audioPlayer: AudioPlayer = {
-  audioVolume: 90,
-  songDuration: 36,
-  song: "Mess",
-  details: {
-    author: "Ed Sheeran",
-    year: 2015,
-  },
+const phone: Product = {
+  description: "Samsung Galaxy S10",
+  price: 1000.0,
+};
+
+const tablet: Product = {
+  description: "iPad Air",
+  price: 500.0,
 };
 ```
 
-- Se crea `audioPlayer`, con propiedades que representan el volumen, la duración de la canción, el nombre de la canción y detalles sobre el autor.
+- Se crean dos objetos `phone` y `tablet` basados en la interfaz `Product`.
 
-### 3. Desestructuración de Objetos
-
-```typescript
-const { song: anotherSong, songDuration: duration, details } = audioPlayer;
-const { author } = details;
-```
-
-- Se extraen propiedades del objeto `audioPlayer`:
-  - `song` se renombra como `anotherSong`.
-  - `songDuration` se renombra como `duration`.
-  - `details` se extrae para acceder a su contenido.
-  - De `details`, se extrae `author`.
-
-### 4. Impresión de Valores en Consola
+### 3. Definición de la Interfaz `taxCalculationOptions`
 
 ```typescript
-console.log("Song: ", anotherSong);
-console.log("Duration: ", duration);
-console.log("Author: ", author);
+interface taxCalculationOptions {
+  tax: number;
+  products: Product[];
+}
 ```
 
-- Se imprimen los valores extraídos en la consola:
-  ```
-  Song:  Mess
-  Duration:  36
-  Author:  Ed Sheeran
-  ```
+- Esta interfaz modela los datos requeridos por la función `taxCalculation`.
+  - `tax`: representa el impuesto como número decimal.
+  - `products`: un arreglo de productos.
 
-### 5. Desestructuración de Arreglos
+### 4. Implementación de `taxCalculation`
 
 ```typescript
-const [, , trunks = "Not Found"]: string[] = ["Goku", "Vegeta"];
-console.error("Personaje 3: ", trunks);
+function taxCalculation(options: taxCalculationOptions): [number, number] {
+  const { tax, products } = options;
+  let total = 0;
+  products.forEach(({ price }) => {
+    total += price;
+  });
+  return [total, total * tax];
+}
 ```
 
-- Se define un arreglo con los personajes `Goku` y `Vegeta`.
-- Se usa la desestructuración para obtener el tercer elemento (`trunks`):
-  - Como el arreglo tiene solo dos elementos, `trunks` tomará el valor por defecto "Not Found".
-- Se imprime el valor en consola como error:
-  ```
-  Personaje 3:  Not Found
-  ```
+- Recibe un objeto `options` que contiene `tax` y `products`.
+- Usa **desestructuración** para extraer `tax` y `products` dentro de la función.
+- Calcula el `total` sumando los precios de todos los productos.
+- Retorna una **tupla** con dos valores:
+  - El total de los productos.
+  - El impuesto calculado (`total * tax`).
 
-### 6. Exportación Vacía
+### 5. Llamada a la Función y Almacenamiento de Resultados
 
 ```typescript
-export {};
+const shoppingCart = [phone, tablet];
+const tax = 0.16;
+const [total, taxTotal] = taxCalculation({ tax: tax, products: shoppingCart });
 ```
 
-- Define el archivo como un módulo independiente.
-- Evita conflictos de nombres en proyectos grandes.
+- Se define `shoppingCart` con los productos creados.
+- Se establece la tasa de impuesto en `0.16` (16%).
+- Se llama a `taxCalculation`, y el resultado se desestructura en `total` y `taxTotal`.
 
-### Conclusión
+### 6. Impresión de Resultados
 
-Este código muestra:
+```typescript
+console.log("Total", total);
+console.log("tax", taxTotal);
+```
 
-- Cómo desestructurar objetos y renombrar propiedades extraídas.
-- Cómo extraer propiedades anidadas.
-- Cómo aplicar la desestructuración en arreglos con valores por defecto.
-- Cómo imprimir valores extraídos en la consola.
+- Imprime en consola los valores calculados.
+
+### 📌 Resumen
+
+✅ Uso de **interfaces** para estructurar datos.  
+✅ **Desestructuración** en parámetros de funciones.  
+✅ Uso de **tuplas** (`[number, number]`) como retorno.  
+✅ **Iteración con `forEach`** para calcular el total.  
+✅ **Almacenamiento e impresión** de valores calculados.
