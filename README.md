@@ -30,3 +30,4 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [03 Funciones Básicas](./markdown/03-basic-functions.md)
 - [04 Ejercicio de interfaces](./markdown/04-homework-types.md)
 - [05 Desestructuración de Objetos y Arreglos](./markdown/05-desestructuring-Objects-Arrays.md)
+- [06 Importación y Exportación de Módulos](./markdown/06-import-export.md)

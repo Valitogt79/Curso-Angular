@@ -4,7 +4,7 @@ interface Product {
   price: number;
 }
 
-const phone: Product = {
+export const phone: Product = {
   description: "Samsung Galaxy S10",
   price: 1000.0,
 };
@@ -22,7 +22,9 @@ interface taxCalculationOptions {
 // function taxCalculation(options: taxCalculationOptions): [number, number] {
 // function taxCalculation({ tax, products }: taxCalculationOptions): [number, number] {
 
-function taxCalculation(options: taxCalculationOptions): [number, number] {
+export function taxCalculation(
+  options: taxCalculationOptions,
+): [number, number] {
   const { tax, products } = options;
   let total = 0;
   products.forEach(({ price }) => {
@@ -41,5 +43,3 @@ const [total, taxTotal] = taxCalculation({
 
 console.log("Total", total);
 console.log("tax", taxTotal);
-
-export {};
