@@ -33,3 +33,4 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [06 Importación y Exportación de Módulos](./markdown/06-import-export.md)
 - [07 clases](./markdown/07-clases.md)
 - [08 Genéricos](./markdown/08-generics.md)
+- [09 Decoradores](./markdown/09-decorators.md)
