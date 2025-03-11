@@ -35,3 +35,20 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [08 Genéricos](./markdown/08-generics.md)
 - [09 Decoradores](./markdown/09-decorators.md)
 - [10 Encademiento Opcional](./markdown/10-optional-chaining.md)
+
+### Primeros pasos en Angular
+
+En esta sección aprenderemos sobre:
+
+    •    Señales
+    •    Estado
+    •    Propiedades
+    •    Rutas
+    •    Métodos
+    •    Eventos
+    •    Cambios en el DOM
+    •    Cada archivo y directorio de un proyecto
+
+El objetivo es tener una introducción a conceptos básicos y algunos no tan básicos de Angular, para comenzar a familiarizarnos y aprender esta tecnología.
+
+- [01 - instalación de Angular](./markdown/01-bases.md)
