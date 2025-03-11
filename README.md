@@ -32,3 +32,4 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [05 Desestructuración de Objetos y Arreglos](./markdown/05-desestructuring-Objects-Arrays.md)
 - [06 Importación y Exportación de Módulos](./markdown/06-import-export.md)
 - [07 clases](./markdown/07-clases.md)
+- [08 Genéricos](./markdown/08-generics.md)
