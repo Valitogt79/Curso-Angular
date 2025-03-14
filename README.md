@@ -53,4 +53,4 @@ El objetivo es tener una introducción a conceptos básicos y algunos no tan bá
 
 - [01 - instalación de Angular](./markdown/01-bases.md)
 - [Ejemplo de un contador en Angular](./markdown/ejemplo-contador.md)
-- Ejemplo de Nuevo feature, Change Hero Angular](./markdown/ejemplo-change-Hero.md)
+- [Ejemplo de Nuevo feature, Change Hero Angular](./markdown/ejemplo-change-Hero.md)
