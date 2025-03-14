@@ -34,7 +34,7 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 - [07 clases](./markdown/07-clases.md)
 - [08 Genéricos](./markdown/08-generics.md)
 - [09 Decoradores](./markdown/09-decorators.md)
-- [10 Encademiento Opcional](./markdown/10-ecadenamiento-opcional.md)
+- [10 Encademiento Opcional](./markdown/)
 
 ### Primeros pasos en Angular
 
@@ -53,3 +53,4 @@ El objetivo es tener una introducción a conceptos básicos y algunos no tan bá
 
 - [01 - instalación de Angular](./markdown/01-bases.md)
 - [Ejemplo de un contador en Angular](./markdown/ejemplo-contador.md)
+- Ejemplo de Nuevo feature, Change Hero Angular](./markdown/ejemplo-change-Hero.md)
