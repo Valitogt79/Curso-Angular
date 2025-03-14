@@ -52,5 +52,5 @@ En esta sección aprenderemos sobre:
 El objetivo es tener una introducción a conceptos básicos y algunos no tan básicos de Angular, para comenzar a familiarizarnos y aprender esta tecnología.
 
 - [01 - instalación de Angular](./markdown/01-bases.md)
-  - [Ejemplo - Contador](/markdown/ejemplo-contador.mdd
+  - [Ejemplo - Contador](/markdown/ejemplo-contador.md)
   - [Ejemplo - Change Hero](./markdown/ejemplo-change-Hero.md)
