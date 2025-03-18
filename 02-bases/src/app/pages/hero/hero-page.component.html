@@ -1,17 +1,18 @@
 <h1>{{ name() }}</h1>
 
 <dl>
-  <td>Nombre:</td>
+  <dt>Nombre:</dt>
   <dd>{{ name() }}</dd>
 
-  <td>Edad:</td>
+  <dt>Edad:</dt>
   <dd>{{ age() }}</dd>
 
-  <td>Método:</td>
-  <dd>{{ getHeroDescription() }}</dd>
+  <dt>Método:</dt>
+  <dd>{{ heroDescription() }}</dd>
 
-  <td>Capitalizado:</td>
-  <dd>{{ name().toUpperCase() }}</dd>
+  <dt>Capitalizado:</dt>
+  <!-- <dd>{{ capitalizedName() }}</dd> -->
+  <dd>{{ name() | uppercase }}</dd>
 </dl>
 
 <button (click)="changeHero()" class="btn btn-primary mx-2">
