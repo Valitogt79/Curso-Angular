@@ -38,20 +38,10 @@ Para seguir este curso y trabajar con los proyectos en este repositorio, necesit
 
 ### Primeros pasos en Angular
 
-En esta sección aprenderemos sobre:
-
-    •    Señales
-    •    Estado
-    •    Propiedades
-    •    Rutas
-    •    Métodos
-    •    Eventos
-    •    Cambios en el DOM
-    •    Cada archivo y directorio de un proyecto
-
 El objetivo es tener una introducción a conceptos básicos y algunos no tan básicos de Angular, para comenzar a familiarizarnos y aprender esta tecnología.
 
-- [01 - instalación de Angular](./markdown/01-bases.md)
-  - [Ejemplo - Contador](/markdown/ejemplo-contador.md)
-  - [Ejemplo - Change Hero](./markdown/ejemplo-change-Hero.md)
-    - [Modificando el código con señales (signals)](./markdown/signals.md)
+- [instalación de Angular](./markdown/01-bases.md)
+- [Ejemplo - Contador](/markdown/ejemplo-contador.md)
+- [Ejemplo - Change Hero](./markdown/ejemplo-change-Hero.md)
+  - [Modificando el código con señales (signals)](./markdown/signals.md)
+  - [Agregando un NavBar](./markdown/navbar.md)
