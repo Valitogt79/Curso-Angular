@@ -44,4 +44,4 @@ El objetivo es tener una introducción a conceptos básicos y algunos no tan bá
 - [Ejemplo - Contador](/markdown/ejemplo-contador.md)
 - [Ejemplo - Change Hero](./markdown/ejemplo-change-Hero.md)
   - [Modificando el código con señales (signals)](./markdown/signals.md)
-  - [Agregando un NavBar](./markdown/navbar.md)
+  - [Agregando un NavBar](./markdown/NavBar.md)
