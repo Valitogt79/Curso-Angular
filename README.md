@@ -46,3 +46,4 @@ El objetivo es tener una introducción a conceptos básicos y algunos no tan bá
   - [Modificando el código con señales (signals)](./markdown/signals.md)
   - [Agregando un NavBar](./markdown/NavBar.md)
 - [Ejemplo - DragonBall](./markdown/pageDragonBall.md)
+  - [Agregando componente (signals y Estado Reactivo)](/markdown/componentDragonBall.md)
